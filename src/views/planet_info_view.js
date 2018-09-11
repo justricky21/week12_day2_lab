@@ -17,7 +17,11 @@ PlanetInfoView.prototype.render = function(planet) {
     
     const imageSource = planet.image;
     const body = document.querySelector('body');
-    body.setAttribute('style', `background: url('${planet.image}')`)
+    body.setAttribute('style',
+    `background: url('${planet.image}');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;`)
     
     delete planet.image;
     this.element.innerHTML = '';
